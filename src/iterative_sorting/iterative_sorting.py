@@ -13,6 +13,7 @@ def selection_sort(arr):
             if arr[num] < arr[spot_marker]:
                 arr[spot_marker], arr[num] = arr[num], arr[spot_marker]
         spot_marker += 1
+        
 
 
         # TO-DO: swap

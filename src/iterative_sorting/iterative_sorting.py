@@ -1,12 +1,18 @@
 # TO-DO: Complete the selection_sort() function below
 def selection_sort(arr):
     # loop through n-1 elements
-    for i in range(0, len(arr) - 1):
-        cur_index = i
-        smallest_index = cur_index
+    # for i in range(0, len(arr) - 1):
+    #     cur_index = i
+    #     smallest_index = cur_index
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc)
         # Your code here
+    spot_marker = 0
+    while spot_marker < len(arr):
+        for num in range(spot_marker, len(arr)):
+            if arr[num] < arr[spot_marker]:
+                arr[spot_marker], arr[num] = arr[num], arr[spot_marker]
+        spot_marker += 1
 
 
         # TO-DO: swap
@@ -18,6 +24,14 @@ def selection_sort(arr):
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
     # Your code here
+    swap_happened = True
+    while swap_happened:
+        print('bubble sort status: ' + str(arr))
+        swap_happened = False
+        for num in range(len(arr)-1):
+            if arr[num] > arr[num+1]:
+                swap_happened = True
+                arr[num], arr[num+1] = arr[num+1], arr[num]
 
 
     return arr
